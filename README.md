@@ -1,6 +1,12 @@
 # Stock_Chatbot
 This is a Chatbot project by Kenneth Sun to help clients with stock information.
 
+## Brief video
+
+<video width="320" height="240" controls>
+  <source src="Brief_Example.MOV">
+</video>
+
 # Introduction
 
 This is a chatbot to help clients with stock information.   
@@ -17,12 +23,6 @@ The following techniques or methods are implemented:
 - Complex pandas Dataframe processing and data cleaning, and producing a corresponding matplotlib figure.
 
 # Example
-
-## Brief example video
-
-<!-- <video width="320" height="240" controls>
-  <source src="Brief_Example.MOV" type="video/mov">
-</video> -->
 
 ## Identification sample
 
