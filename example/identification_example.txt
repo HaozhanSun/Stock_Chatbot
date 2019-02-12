@@ -1,4 +1,4 @@
---------------------------------------------
+---------------------------------------------
 In[1]:
 Tell me the highest price of TSLA in the past few days.
 
@@ -28,7 +28,7 @@ Out[1]:
   {'name': 'add_historical_data', 'confidence': 0.0335905287471568}],
  'text': 'i want to know the highest price of TSLA in the past few days'}
 
---------------------------------------------
+---------------------------------------------
 
 In[2]:
 I want to get the historical close price of tesla from 2018-10-22 to 2018-11-22.
