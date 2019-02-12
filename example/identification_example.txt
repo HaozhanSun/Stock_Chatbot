@@ -1,0 +1,73 @@
+--------------------------------------------
+In[1]:
+Tell me the highest price of TSLA in the past few days.
+
+Out[1]:
+{'intent': {'name': 'vague_historical_data', 'confidence': 0.5648109407370152},
+ 'entities': [{'start': 19,
+   'end': 26,
+   'value': 'high',
+   'entity': 'hst_data_type',
+   'confidence': 0.7486755036905514,
+   'extractor': 'ner_crf',
+   'processors': ['ner_synonyms']},
+  {'start': 36,
+   'end': 40,
+   'value': 'tsla',
+   'entity': 'company',
+   'confidence': 0.8320076082894126,
+   'extractor': 'ner_crf'}],
+ 'intent_ranking': [{'name': 'vague_historical_data',
+   'confidence': 0.5648109407370152},
+  {'name': 'current_price', 'confidence': 0.09569968257227997},
+  {'name': 'finish', 'confidence': 0.08864097295750097},
+  {'name': 'advice', 'confidence': 0.06723593774902344},
+  {'name': 'clear_historical_data', 'confidence': 0.06454430737243595},
+  {'name': 'function_intro', 'confidence': 0.04976892450201746},
+  {'name': 'greet', 'confidence': 0.03570870536257051},
+  {'name': 'add_historical_data', 'confidence': 0.0335905287471568}],
+ 'text': 'i want to know the highest price of TSLA in the past few days'}
+
+--------------------------------------------
+
+In[2]:
+I want to get the historical close price of tesla from 2018-10-22 to 2018-11-22.
+
+Out[2]:
+{'intent': {'name': 'clear_historical_data', 'confidence': 0.5143642351949398},
+ 'entities': [{'start': 29,
+   'end': 40,
+   'value': 'close',
+   'entity': 'hst_data_type',
+   'confidence': 0.9438781263198452,
+   'extractor': 'ner_crf',
+   'processors': ['ner_synonyms']},
+  {'start': 44,
+   'end': 49,
+   'value': 'TSLA',
+   'entity': 'company',
+   'confidence': 0.9569179128019221,
+   'extractor': 'ner_crf',
+   'processors': ['ner_synonyms']},
+  {'start': 55,
+   'end': 65,
+   'value': '2018 - 10 - 22',
+   'entity': 'start_date',
+   'confidence': 0.9493587073791514,
+   'extractor': 'ner_crf'},
+  {'start': 69,
+   'end': 79,
+   'value': '2018 - 11 - 22',
+   'entity': 'end_date',
+   'confidence': 0.9580230503946718,
+   'extractor': 'ner_crf'}],
+ 'intent_ranking': [{'name': 'clear_historical_data',
+   'confidence': 0.5143642351949398},
+  {'name': 'add_historical_data', 'confidence': 0.13614440454674825},
+  {'name': 'vague_historical_data', 'confidence': 0.09866005225056519},
+  {'name': 'current_price', 'confidence': 0.07643883016795355},
+  {'name': 'finish', 'confidence': 0.05795373586158773},
+  {'name': 'advice', 'confidence': 0.04493589838554797},
+  {'name': 'function_intro', 'confidence': 0.03955291104552578},
+  {'name': 'greet', 'confidence': 0.03194993254713175}],
+ 'text': 'i want to get the historical close price of tesla from 2018-10-22 to 2018-11-22'}
