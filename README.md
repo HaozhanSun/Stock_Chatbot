@@ -4,7 +4,7 @@ This is a Chatbot project by Kenneth Sun to help clients with stock information.
 ## Brief video
 
 <video width="320" height="240" controls>
-  <source src="Brief_Example.MOV">
+  <source src="Brief_Example.mp4" type="video/mp4">
 </video>
 
 # Introduction
