@@ -3,9 +3,9 @@ This is a Chatbot project by Kenneth Sun to help clients with stock information.
 
 ## Brief video
 
-[![Everything Is AWESOME](video_preview.png)]
+[![Everything Is AWESOME](https://img.youtube.com/vi/beoH2ikcXqk/0.jpg)]
 (https://youtu.be/beoH2ikcXqk "Everything Is AWESOME")
-
+<!-- beoH2ikcXqk -->
 # Introduction
 
 This is a chatbot to help clients with stock information.   
