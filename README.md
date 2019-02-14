@@ -8,7 +8,7 @@ This is a Chatbot project by Kenneth Sun to help clients with stock information.
 For Mainland China users, please see ??????????
 ## Project report
 For further information about what this project does, please see
-[Chatbot_Project_Report.pdf](Chatbot_Project_Report.pdf)
+[Chatbot_Project_Report.pdf](Chatbot_Project_Report.pdf) (Or Download:??????)
 # Introduction
 
 This is a chatbot to help clients with stock information.   
