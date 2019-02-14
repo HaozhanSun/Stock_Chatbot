@@ -7,6 +7,9 @@ This is a Chatbot project by Kenneth Sun to help clients with stock information.
   <source src="Brief_Example.mp4" type="video/mp4">
 </video>
 
+<!-- ![](Brief_Example.mp4) -->
+
+<!-- https://youtu.be/beoH2ikcXqk  -->
 # Introduction
 
 This is a chatbot to help clients with stock information.   
