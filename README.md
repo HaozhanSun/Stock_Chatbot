@@ -11,6 +11,8 @@ For Mainland China users, please see https://www.bilibili.com/video/av43594521/
 For further information about what this project does, please see
 [Chatbot_Project_Report.pdf](Chatbot_Project_Report.pdf)
 
+- Note: If the online viewer is not available, you can DOWNLOAD the report in the link above.
+
 # Introduction
 
 This is a chatbot to help clients with stock information.
