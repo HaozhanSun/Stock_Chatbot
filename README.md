@@ -4,12 +4,18 @@ This is a Chatbot project by Kenneth Sun to help clients with stock information.
 ## Brief video
 
 [![Everything Is AWESOME](video_preview.png)](https://youtu.be/beoH2ikcXqk "Everything is AWESOME")
-<!-- beoH2ikcXqk -->
+
+For Mainland China users, please see https://www.bilibili.com/video/av43594521/
+
+# Project report
+For further information about what this project does, please see
+[Chatbot_Project_Report.pdf](Chatbot_Project_Report.pdf)
+
 # Introduction
 
-This is a chatbot to help clients with stock information.   
+This is a chatbot to help clients with stock information.
 With this chatbot, clients can query various stock indicators conveniently. And he can also give brief investment suggestions.  
-The chatbot is associated with Wechat app via _wxpy_ API. Model training is based on  _Rasa-nlu_.   
+The chatbot is associated with Wechat app via _wxpy_ API. Model training is based on  _Rasa-nlu_.
 The following techniques or methods are implemented:
 - Multiple selective answers to the same question and provide a default answer.
 - Intent recognition based on sklearn and spacy.
@@ -25,6 +31,7 @@ The following techniques or methods are implemented:
 ## Identification sample
 
 ### Input: "I want to know the highest price of TSLA in the past few days"
+
 ```
 # Output:
 {'intent': {'name': 'vague_historical_data', 'confidence': 0.5648109407370152},
@@ -48,6 +55,7 @@ The following techniques or methods are implemented:
   {'name': 'advice', 'confidence': 0.06723593774902344},
  'text': 'i want to know the highest price of TSLA in the past few days'}
 ```
+
 # Environment
 
 - Python 3.4-3.6.
@@ -56,12 +64,47 @@ The following techniques or methods are implemented:
 
 # Usage
 
-## Intent extraction
+## Train the model
+
+You can either use the given model
+```
+trainer = Trainer(config.load("config_spacy.yml"))
+training_data = load_data('stock_training.json')
+interpreter = trainer.train(training_data)
+```
+Or train a customized model by yourself
+```
+# Build a training file
+customized_training = {
+  rasa_nlu_data = {
+    # Your training example here
+  }
+}
+# Write the data into json file
+with open("stock_training.json","w") as f:
+    json.dump(stock_training,f)
+    print('Done')
+# Train the model
+trainer = Trainer(config.load("config_spacy.yml"))
+training_data = load_data('stock_training.json')
+interpreter = trainer.train(training_data)
+```
+## Extract the intent and entities
 
 ```
-interpreter.parse('I want to know the price of tesla.')
+interpreter.parse('I want to get the historical close price of tesla from Oct 12 2017 to Jan 22 2018')
 ```
+
+## Generate line chart of stocks
+
+```
+message = 'Tell me the historical close price of TSLA from 2017-5-8 to 2017-6-8.'
+
+generate_figure(message)
+```
+
 ## Build your Wechat bot
+
 ```
 from wxpy import *
 
@@ -69,14 +112,12 @@ from wxpy import *
 bot = Bot()
 
 # Set target client account
-my_friend = bot.friends().search('Chatbot_KennethSun')[0]
-```
+my_friend = bot.friends().search('YOUR PARTNER HERE')[0]
 
-## Generate line chart of stocks
-```
-message = 'Tell me the historical close price of TSLA from 2017-5-8 to 2017-6-8.'
-
-generate_figure(message)
+# Register
+@bot.register(my_friend, TEXT)
+def auto_reply(msg):
+    # Your chatbot action here
 ```
 
 # Contact
