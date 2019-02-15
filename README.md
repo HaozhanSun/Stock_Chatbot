@@ -65,11 +65,26 @@ The following techniques or methods are implemented:
 
 # Usage
 
-## Intent extraction
+## Train the model
+You can either use the given model
+```
+trainer = Trainer(config.load("config_spacy.yml"))
+training_data = load_data('stock_training.json')
+interpreter = trainer.train(training_data)
+```
+Or train a customized model by yourself
+```
+# Build a training file
+customized_training = {
+  rasa_nlu_data = {
+    # Your training example here
+  }
+}
+# Write the data into json file
+with open("stock_training.json","w") as f:
+  json.dump(stock_training,f)
+```
 
-```
-interpreter.parse('I want to know the price of tesla.')
-```
 ## Build your Wechat bot
 ```
 from wxpy import *
