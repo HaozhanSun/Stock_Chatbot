@@ -1,7 +1,7 @@
 # Stock_Chatbot
 This is a Chatbot project by Kenneth Sun to help clients with stock information.
 
-## Brief video
+## Brief video (2mins)
 
 [![Everything Is AWESOME](video_preview.png)](https://youtu.be/beoH2ikcXqk "Everything is AWESOME")
 
